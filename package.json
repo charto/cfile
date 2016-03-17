@@ -1,0 +1,27 @@
+{
+  "name": "cfile",
+  "version": "0.0.1",
+  "description": "File container without dependencies",
+  "main": "dist/cfile.js",
+  "typings": "dist/cfile.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "typings": "typings",
+    "prepublish": "typings install && tsc",
+    "test": "tsc -p test"
+  },
+  "author": "Juha Järvi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charto/cfile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charto/cfile/issues"
+  },
+  "homepage": "https://github.com/charto/cfile#readme",
+  "devDependencies": {
+    "typescript": "^1.8.7",
+    "typings": "~0.7.9"
+  }
+}
