@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"declaration": false,
+		"experimentalDecorators": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"target": "es5"
+	},
+	"files": [
+		"../typings/main.d.ts",
+
+		"test.ts"
+	]
+}

@@ -75,6 +75,8 @@ export class Address {
 			}
 		}
 
+		if(part && partList.length < 2) part = '';
+
 		// Keep any trailing slash.
 		if(!part) partList.push(part);
 

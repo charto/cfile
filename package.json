@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "typings": "typings",
     "prepublish": "typings install && tsc",
-    "test": "tsc -p test"
+    "test": "npm link cfile && tsc -p test && node test/test.js"
   },
   "author": "Juha Järvi",
   "license": "MIT",
