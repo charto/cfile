@@ -13,7 +13,7 @@ export class Address {
 
 		// Get protocol.
 		var match = reProto.exec(uri);
-		var proto = (match && match[0]) || (base && base.protocol) || '';
+		var proto = (match && match[0].toLowerCase()) || (base && base.protocol) || '';
 		var rest = uri.substr(proto.length);
 
 		this.protocol = proto;
@@ -36,12 +36,19 @@ export class Address {
 		return(new Address(uri, this));
 	}
 
+	/** Convert to URI string. */
+
 	format() {
 		var proto = this.protocol;
 
 		if(proto == 'urn:') return(proto + this.partList.join(':'));
 
-		return((proto || 'http:') + '//' + this.partList.join('/'));
+		var params = '';
+		if(this.paramList && this.paramList.length) {
+			params = '?' + this.paramList.join('&');
+		}
+
+		return((proto || 'http:') + '//' + this.partList.join('/') + params);
 	}
 
 	private resolveParts(otherList: string[]) {
@@ -68,12 +75,16 @@ export class Address {
 			}
 		}
 
+		// Keep any trailing slash.
 		if(!part) partList.push(part);
 
 		return(partList);
 	}
 
+	/** Protocol including trailing colon, eg. http: or urn: */
 	protocol: string;
+	/** URL split by slashes without query or hash, or URN split by colons. */
 	partList: string[];
+	/** Query parameters in the form a=b. */
 	paramList: string[];
 }
