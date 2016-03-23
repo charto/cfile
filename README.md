@@ -17,6 +17,24 @@ Differences from `vinyl`:
 - Files optionally point to other related files, such as source maps.
 - Written in [TypeScript](http://www.typescriptlang.org/).
 
+API
+===
+
+> <a name="api-address"></a>
+> ### [`Address`](#api-address)  
+> Simple absolute URI container and resolver.  
+> > **new( )**  
+> > &emsp;&#x25aa; uri <sup>`string`</sup>  
+> > &emsp;&#x25ab; base<sub>?</sub> [<sup>`Address`</sup>](#api-address)  
+> <a name="api-file"></a>
+> ### [`File`](#api-file)  
+> Represents a remote or local file and its contents (stream or buffer).  
+> > **.address** <sup>`string`</sup>  
+> > &emsp;Resolved absolute URI (URL or URN) of the file.  
+> > **.resolve( )** [<sup>&rArr; `Address`</sup>](#api-address)  
+> > &emsp;Resolve another URI relative to this address.  
+> > &emsp;&#x25aa; uri <sup>`string`</sup> The URI to resolve.  
+
 License
 =======
 
