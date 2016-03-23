@@ -6,6 +6,7 @@
   "typings": "dist/cfile.d.ts",
   "scripts": {
     "tsc": "tsc",
+    "docts": "docts",
     "typings": "typings",
     "prepublish": "typings install && tsc",
     "test": "npm link cfile && tsc -p test && node test/test.js"

@@ -4,7 +4,7 @@
 var reProto = /^(urn|http|https|file):/i;
 var reParts = /^([^?#]*)(\?[^#]*)?(#.*)?/;
 
-/** Simple URI container. */
+/** Simple absolute URI container and resolver. */
 
 export class Address {
 	constructor(uri: string, base?: Address) {
