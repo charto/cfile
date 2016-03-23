@@ -31,7 +31,7 @@ API
 > Represents a remote or local file and its contents (stream or buffer).  
 > > **.address** <sup>`string`</sup>  
 > > &emsp;Resolved absolute URI (URL or URN) of the file.  
-> > **.resolve( )** [<sup>&rArr; `Address`</sup>](#api-address)  
+> > **.resolve( )** <sup>&rArr; <code>string | [Address](#api-address)</code></sup>  
 > > &emsp;Resolve another URI relative to this address.  
 > > &emsp;&#x25aa; uri <sup>`string`</sup> The URI to resolve.  
 
